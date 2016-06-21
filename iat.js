@@ -7,7 +7,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 
 	// lets set the attibutes/concepts in one place so we can change them when we want
 	var attribute1 = 'Mots positifs';
-	var attribute2 = 'Mots n�gatifs';
+	var attribute2 = 'Mots négatifs';
 	var concept1 = 'Handicap';
 	var concept2 = 'Valide';
 
@@ -434,10 +434,10 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 		// #### Unpleasant
 		attribute2: [
 			{word: 'Mal'},
-			{word: 'Col�re'},
-			{word: 'P�nible'},
+			{word: 'Colère'},
+			{word: 'Pénible'},
 			{word: 'Tristesse'},
-			{word: 'M�chant'},
+			{word: 'Méchant'},
 			{word: 'Mauvais'}
 		],
 		// #### disabled
@@ -827,13 +827,13 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 	// scorer messages
 	scorer.addSettings('message',{
 		MessageDef: [
-			{ cut:'-0.65', message:'Your data suggest a strong implicit preference for Disabled People compared to Abled People' },
-			{ cut:'-0.35', message:'Your data suggest a moderate implicit preference for Disabled People compared to Abled People.' },
-			{ cut:'-0.15', message:'Your data suggest a slight implicit preference for Disabled People compared to Abled People.' },
-			{ cut:'0.15', message:'Your data suggest little to no difference in implicit preference between Disabled People and Abled People.' },
-			{ cut:'0.35', message:'Your data suggest a slight implicit preference for Abled People compared to Disabled People' },
-			{ cut:'0.65', message:'Your data suggest a moderate implicit preference for Abled People compared to Disabled People' },
-			{ cut:'5', message:'Your data suggest a strong implicit preference for Abled People compared to Disabled People' }
+			{ cut:'-0.65', message:'Vos résultats suggèrent une forte préférence implicite pour les personnes handicapées par rapport aux personnes valides.' },
+			{ cut:'-0.35', message:'Vos résultats suggèrent une préférence implicite moyenne pour les personnes handicapées par rapport aux personnes valides.' },
+			{ cut:'-0.15', message:'Vos résultats suggèrent une légère préférence implicite pour les personnes handicapées par rapport aux personnes valides.' },
+			{ cut:'0.15', message:'Vos résultats suggèrent peu ou pas de préférence implicite entre les les personnes handicapées et les personnes valides.' },
+			{ cut:'0.35', message:'Vos résultats suggèrent une légère préférence implicite pour les personnes valides par rapport aux personnes handicapées.' },
+			{ cut:'0.65', message:'Vos résultats suggèrent une préférence implicite moyenne pour les personnes valides par rapport aux personnes handicapées.' },
+			{ cut:'5', message:'Vos résultats suggèrent une forte préférence implicite pour les personnes pour les personnes valides par rapport aux personnes handicapées' }
 		]
 	});
 
