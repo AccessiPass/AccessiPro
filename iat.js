@@ -341,7 +341,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 
 		// This sets the appearance for the instructions.
 		Instructions: [
-			{css:{'font-size':'1.3em',color:'white', lineHeight:1.2},handle:'instructions'}
+			{css:{'font-size':'1.3em','top':'120px',color:'white', lineHeight:1.2},handle:'instructions'}
 		],
 
 		// #### The trial stimuli
@@ -400,7 +400,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 		// #### Feedback
 		// This stimulus is used for giving feedback, in this case only an error notification
 		feedback : [
-			{handle:'error', location: {top: 80}, css:{color:'red','font-size':'4em'}, media: {word:'X'}, nolog:true}
+			{handle:'error', location: {top: 120}, css:{color:'red','font-size':'4em'}, media: {word:'X'}, nolog:true}
 		],
 
 		// #### Layout
