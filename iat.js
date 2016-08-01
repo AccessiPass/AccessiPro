@@ -341,7 +341,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 
 		// This sets the appearance for the instructions.
 		Instructions: [
-			{css:{'font-size':'1.3em','top':'120px',color:'white', lineHeight:1.2},handle:'instructions'}
+			{css:{'font-size':'1.3em',color:'white', lineHeight:1.2},handle:'instructions'}
 		],
 
 		// #### The trial stimuli
