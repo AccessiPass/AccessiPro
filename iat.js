@@ -761,7 +761,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 
 				DScoreObj = scorer.computeD();
 
-				media = {css:{color:'black'},media:{html:'<div><p style="font-size:18px;color:#FFFFFF"> '+DScoreObj.FBMsg+'<br>Votre résultat :'+DScoreObj.DScore+'</p></div>'}};
+				media = {css:{color:'black'},media:{html:'<div><p style="font-size:18px;color:#FFFFFF"> '+DScoreObj.FBMsg+'<br><span style="color:#56C2ED;">Votre résultat :'+DScoreObj.DScore+'</span></p></div><div><p style="font-size:28px;color:#FFFFFF">Vous avez terminé le test<br/><br/>Vous pouvez poursuivre le programme AccessiPro en cliquant sur ce lien :<br/><br/> <a href="http://bit.ly/2arXTSD" title="Retour au programme de sensibilisation au handicap AccessiPro">Retour au programme de sensibilisation au handicap AccessiPro</a></p></div>'}};
 				trial.stimuli.push(media);
 				scorer.dynamicPost({
 					score1: DScoreObj.DScore,
@@ -774,7 +774,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 				});
 
 				DScoreObj = scorer.computeD();
-				media = {css:{color:'black'},media:{html:'<div><p style="font-size:18px;color=#FFFFFF>'+DScoreObj.FBMsg+'<br>Votre résultat :'+DScoreObj.DScore+'</p></div>'}};
+				media = {css:{color:'black'},media:{html:'<div><p style="font-size:18px;color=#FFFFFF>'+DScoreObj.FBMsg+'<br><span style="color:#56C2ED;">Votre résultat :'+DScoreObj.DScore+'</span></p></div><div><p style="font-size:28px;color:#FFFFFF">Vous avez terminé le test<br/><br/>Vous pouvez poursuivre le programme AccessiPro en cliquant sur ce lien :<br/><br/> <a href="http://bit.ly/2arXTSD" title="Retour au programme de sensibilisation au handicap AccessiPro">Retour au programme de sensibilisation au handicap AccessiPro</a></p></div>'}};
 				trial.stimuli.push(media);
 				scorer.dynamicPost({
 					score1: DScoreObj.DScore,
