@@ -761,7 +761,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 
 				DScoreObj = scorer.computeD();
 
-				media = {css:{color:'black'},media:{html:'<div><p style="font-size:12px;color:#FFFAFA"> '+DScoreObj.FBMsg+'<br>The Score is:'+DScoreObj.DScore+'</p></div>'}};
+				media = {css:{color:'black'},media:{html:'<div><p style="font-size:18px;color:#FFFAFA"> '+DScoreObj.FBMsg+'<br>Votre résultat :'+DScoreObj.DScore+'</p></div>'}};
 				trial.stimuli.push(media);
 				scorer.dynamicPost({
 					score1: DScoreObj.DScore,
@@ -774,7 +774,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 				});
 
 				DScoreObj = scorer.computeD();
-				media = {css:{color:'black'},media:{html:'<h1><div><p style="font-size:12px;color=#FFFAFA>'+DScoreObj.FBMsg+'<br>The Score is:'+DScoreObj.DScore+'</p></div>'}};
+				media = {css:{color:'black'},media:{html:'<div><p style="font-size:18px;color=#FFFAFA>'+DScoreObj.FBMsg+'<br>Votre résultat :'+DScoreObj.DScore+'</p></div>'}};
 				trial.stimuli.push(media);
 				scorer.dynamicPost({
 					score1: DScoreObj.DScore,
@@ -790,7 +790,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 				{//The instructions stimulus
 					data : {'handle':'instStim'},
 					css: {color:'black'},
-					media:{html:'<div><p style="font-size:28px;color:#FFFAFA">You have completed the study<br/><br/>Thank you very much for your participation.<br/><br/> Press "space" to continue to next task.</p></div>'}
+					media:{html:'<div><p style="font-size:28px;color:#FFFAFA">Vous avez terminé le test<br/><br/>Vous pouvez poursuivre le programme AccessiPro en cliquant sur ce lien :<br/><br/> <a href="http://bit.ly/2arXTSD" title="Retour au programme de sensibilisation au handicap AccessiPro">Retour au programme de sensibilisation au handicap AccessiPro</a></p></div>'}
 				}
 			]
 		}
@@ -833,7 +833,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 			{ cut:'0.15', message:'Vos résultats suggèrent peu ou pas de préférence implicite entre les les personnes handicapées et les personnes valides.' },
 			{ cut:'0.35', message:'Vos résultats suggèrent une légère préférence implicite pour les personnes valides par rapport aux personnes handicapées.' },
 			{ cut:'0.65', message:'Vos résultats suggèrent une préférence implicite moyenne pour les personnes valides par rapport aux personnes handicapées.' },
-			{ cut:'5', message:'Vos résultats suggèrent une forte préférence implicite pour les personnes pour les personnes valides par rapport aux personnes handicapées' }
+			{ cut:'5', message:'Vos résultats suggèrent une forte préférence implicite pour les personnes valides par rapport aux personnes handicapées' }
 		]
 	});
 
