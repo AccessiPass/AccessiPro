@@ -31,10 +31,10 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 	});
 
 	// setting the way the logger works (how often we send data to the server and the url for the data)
-	API.addSettings('logger',{
+	/*API.addSettings('logger',{
 		pulse: 20,
 		url : '/PiPlayerCned'
-	});
+	});*/
 
 
 	// ### Trials
@@ -747,7 +747,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 		{
 			mixer: 'choose',
 			data: [
-				//{mixer:'wrapper',data:regularIAT},
+				{mixer:'wrapper',data:regularIAT},
 				{mixer:'wrapper',data:swapedIAT}
 			]
 		},
@@ -776,7 +776,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 				});
 
 				// Second parcel
-				/*scorer.addSettings('compute',{
+				scorer.addSettings('compute',{
 					parcelValue : ['second']
 				});
 
@@ -786,7 +786,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 				scorer.dynamicPost({
 					score1: DScoreObj.DScore,
 					feedback1: DScoreObj.FBMsg
-				});*/
+				});
 
 			}
 		},
