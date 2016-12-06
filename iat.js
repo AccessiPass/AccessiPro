@@ -31,8 +31,8 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 	});
 
 	// setting the way the logger works (how often we send data to the server and the url for the data)
-	API.addSettings('logger',{
-		pulse: 20,
+	//API.addSettings('logger',{
+		//pulse: 20,
 		// url : '/PiPlayerCned'
 	});
 
@@ -247,7 +247,8 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 		},
 
 		{
-			data: {block:3, row:2, left1:attribute1, right1:attribute2, left2:concept1, right2:concept2, condition: attribute1 + ',' + concept1 + '/' + attribute2 + ',' + concept2,parcel:'first'},
+			data: {block:3, row:2, left1:attribute1, right1:attribute2, left2:concept1, right2:concept2, 
+			       condition: attribute1 + ',' + concept1 + '/' + attribute2 + ',' + concept2,parcel:'first'},
 			inherit: 'Default',
 			stimuli: [
 				{inherit:{type:'exRandom',set:'attribute1_left'}},
@@ -258,7 +259,8 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 		// ##### block4
 		// This is a combined block - the same as block 3.
 		{
-			data: {block:4, row:1, left1:attribute1, right1:attribute2, left2:concept1, right2:concept2, condition: attribute1 + ',' + concept1 + '/' + attribute2 + ',' + concept2,parcel:'second'},
+			data: {block:4, row:1, left1:attribute1, right1:attribute2, left2:concept1, right2:concept2, 
+			       condition: attribute1 + ',' + concept1 + '/' + attribute2 + ',' + concept2,parcel:'first'},
 			inherit: 'Default',
 			stimuli: [
 				{inherit:{type:'exRandom',set:'concept1_left'}},
@@ -267,7 +269,8 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 		},
 
 		{
-			data: {block:4, row:2, left1:attribute1, right1:attribute2, left2:concept1, right2:concept2, condition: attribute1 + ',' + concept1 + '/' + attribute2 + ',' + concept2,parcel:'second'},
+			data: {block:4, row:2, left1:attribute1, right1:attribute2, left2:concept1, right2:concept2, 
+			       condition: attribute1 + ',' + concept1 + '/' + attribute2 + ',' + concept2,parcel:'first'},
 			inherit: 'Default',
 			stimuli: [
 				{inherit:{type:'exRandom',set:'attribute1_left'}},
@@ -289,7 +292,8 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 		// ##### block6
 		// This is a combined block; attribute1 stayed on the left but now concept1 is on the right.
 		{
-			data: {block:6, row:1, left1:attribute1, right1:attribute2, left2:concept2, right2:concept1, condition: attribute1 + ',' + concept2 + '/' + attribute2 + ',' + concept1,parcel:'first'},
+			data: {block:6, row:1, left1:attribute1, right1:attribute2, left2:concept2, right2:concept1, 
+			       condition: attribute1 + ',' + concept2 + '/' + attribute2 + ',' + concept1,parcel:'first'},
 			inherit: 'Default',
 			stimuli: [
 				{inherit:{type:'exRandom',set:'concept1_right'}},
@@ -298,7 +302,8 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 		},
 
 		{
-			data: {block:6, row:2, left1:attribute1, right1:attribute2, left2:concept2, right2:concept1, condition: attribute1 + ',' + concept2 + '/' + attribute2 + ',' + concept1,parcel:'first'},
+			data: {block:6, row:2, left1:attribute1, right1:attribute2, left2:concept2, right2:concept1, 
+			       condition: attribute1 + ',' + concept2 + '/' + attribute2 + ',' + concept1,parcel:'first'},
 			inherit: 'Default',
 			stimuli: [
 				{inherit:{type:'exRandom',set:'attribute1_left'}},
@@ -309,7 +314,8 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 		// ##### block7
 		// This is a combined block - the same as block 6.
 		{
-			data: {block:7, row:1, left1:attribute1, right1:attribute2, left2:concept2, right2:concept1, condition: attribute1 + ',' + concept2 + '/' + attribute2 + ',' + concept1,parcel:'second'},
+			data: {block:7, row:1, left1:attribute1, right1:attribute2, left2:concept2, right2:concept1, 
+			       condition: attribute1 + ',' + concept2 + '/' + attribute2 + ',' + concept1,parcel:'first'},
 			inherit: 'Default',
 			stimuli: [
 				{inherit:{type:'exRandom',set:'concept1_right'}},
@@ -318,7 +324,8 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 		},
 
 		{
-			data: {block:7, row:2, left1:attribute1, right1:attribute2, left2:concept2, right2:concept1, condition: attribute1 + ',' + concept2 + '/' + attribute2 + ',' + concept1,parcel:'second'},
+			data: {block:7, row:2, left1:attribute1, right1:attribute2, left2:concept2, right2:concept1, 
+			       condition: attribute1 + ',' + concept2 + '/' + attribute2 + ',' + concept1,parcel:'first'},
 			inherit: 'Default',
 			stimuli: [
 				{inherit:{type:'exRandom',set:'attribute1_left'}},
@@ -740,7 +747,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 		{
 			mixer: 'choose',
 			data: [
-				{mixer:'wrapper',data:regularIAT},
+				//{mixer:'wrapper',data:regularIAT},
 				{mixer:'wrapper',data:swapedIAT}
 			]
 		},
@@ -769,7 +776,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 				});
 
 				// Second parcel
-				scorer.addSettings('compute',{
+				/*scorer.addSettings('compute',{
 					parcelValue : ['second']
 				});
 
@@ -779,7 +786,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 				scorer.dynamicPost({
 					score1: DScoreObj.DScore,
 					feedback1: DScoreObj.FBMsg
-				});
+				});*/
 
 			}
 		},
