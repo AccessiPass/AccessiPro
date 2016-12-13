@@ -236,9 +236,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 				block:3,row:1,
 				left1:attribute1, right1:attribute2, left2:concept1, right2:concept2,
 				condition: attribute1 + ',' + concept1 + '/' + attribute2 + ',' + concept2,
-				// This block is also marked as part of a 
-				
-				for the scorer
+				// This block is also marked as part of a for the scorer
 				parcel:'first'
 			},
 			inherit: 'Default',
@@ -778,17 +776,17 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 				});
 
 				// Second parcel
-				scorer.addSettings('compute',{
-					parcelValue : ['second']
-				});
+				//scorer.addSettings('compute',{
+					//parcelValue : ['second']
+				//});
 
-				DScoreObj = scorer.computeD();
+				//DScoreObj = scorer.computeD();
 				//media = {css:{color:'white'},media:{html:'<div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Logo_Accessi_Pro.jpg/300px-Logo_Accessi_Pro.jpg"/><p style="font-size:16px;color=#000000><span style="color:#56C2ED;">Votre résultat :'+DScoreObj.DScore+'</span><br/><br/>'+DScoreObj.FBMsg+'<br><br/></p><p style="font-size:14px;color:#000000">Continuez le programme AccessiPro en cliquant sur ce lien :<br/><br/> <a href="http://bit.ly/2arXTSD" style="color:#23A541;" title="Retour au programme de sensibilisation au handicap AccessiPro">Retour au programme de sensibilisation au handicap AccessiPro</a></p></div>'}};
 				//trial.stimuli.push(media);
-				scorer.dynamicPost({
-					score1: DScoreObj.DScore,
-					feedback1: DScoreObj.FBMsg
-				});
+				//scorer.dynamicPost({
+					//score1: DScoreObj.DScore,
+					//feedback1: DScoreObj.FBMsg
+				//});
 
 			}
 		},
