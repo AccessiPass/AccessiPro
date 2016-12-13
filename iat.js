@@ -343,7 +343,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 	API.addStimulusSets({
 		// This Default stimulus is inherited by the other stimuli so that we can have a consistent appearance and change it from one place.
 		Default: [
-			{css:{color:'#56C2ED','font-size':'2em'}}
+			{css:{color:'#56C2ED','font-size':'1.7em'}}
 		],
 
 		// This sets the appearance for the instructions.
@@ -415,8 +415,8 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
 		// Here we control only the general way that the layout appears.
 		// The mechanics inside the templates and the fact that we set the proper data in all trials allow us to use the same stimuli for the layout of all the trials.
 		layout: [
-			{data:{handle:'left'},location:{left:0,top:0},css:{color:'white',fontSize:'2em'},media:{template:'left.jst'}},
-			{data:{handle:'right'}, location:{left:'auto',right:0,top:0},css:{color:'white',fontSize:'2em'},media:{template:'right.jst'}}
+			{data:{handle:'left'},location:{left:0,top:0},css:{color:'white',fontSize:'1.7em'},media:{template:'left.jst'}},
+			{data:{handle:'right'}, location:{left:'auto',right:0,top:0},css:{color:'white',fontSize:'1.7em'},media:{template:'right.jst'}}
 		]
 	});
 
